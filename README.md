@@ -80,8 +80,11 @@ You already know how this goes, so let's start working:
 <details>
   <summary>Solution</summary>
 
-- Query: `{number_of_employees: { $gt: 5000 }}`
-- Limit: `20`
+- query = { number_of_employees: { $gte: 5000 } };
+- options = { 
+            projection: { _id: 0, name: 1 },
+            limit: 20
+        };
 
 </details>
 
